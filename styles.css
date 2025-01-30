@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    background: #f0e5e5; /* Soft background color */
+    color: #333;
+}
+
+#page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 10px solid transparent; /* Outer spinning border */
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: spin 20s linear infinite; /* Spinning effect */
+}
+
+header {
+    text-align: center;
+    background: #ff6f61; /* Sweet Valentine color */
+    padding: 20px 0;
+    border-radius: 20px 20px 0 0;
+    color: white;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 200px; /* Increased size for visibility */
+    height: 200px; /* Increased size for visibility */
+    border: 4px solid white;
+    margin: 20px auto;
+}
+
+.ajay-pic {
+    width: 150px; /* Slightly smaller size for Ajay's photo */
+    height: 150px; /* Slightly smaller size for Ajay's photo */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#letters {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between letters */
+}
+
+.letter {
+    background-size: cover;
+    background-position: center;
+    width: calc(100% - 20px); /* Responsive width */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.letter:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    margin: 0 0 10px 0;
+    font-family: 'Lobster', cursive;
+}
+
+footer {
+    background: #ff6f61;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Spinning Border CSS */
+@keyframes spin {
+    from {
+        border-color: #ff6f61; /* Color 1 - Pink */
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+    }
+    25% {
+        border-color: #ffcc00; /* Color 2 - Yellow */
+        box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+    }
+    50% {
+        border-color: #00ccff; /* Color 3 - Blue */
+        box-shadow: 0 0 15px rgba(0, 204, 255, 0.7);
+    }
+    75% {
+        border-color: #66ff66; /* Color 4 - Green */
+        box-shadow: 0 0 15px rgba(102, 255, 102, 0.7);
+    }
+    to {
+        border-color: #ff6f61; /* Color 1 - Pink */
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+    }
+}
+
+/* Font Imports from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:wght@300;400;700&display=swap');
